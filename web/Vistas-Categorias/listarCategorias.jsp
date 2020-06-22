@@ -39,7 +39,7 @@
                     }
                 %>
             </table>
-            
+            <a href="crearPDF" class="btn-danger"> || Mostrar Factura PDF || </a>
         </div>
         <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
