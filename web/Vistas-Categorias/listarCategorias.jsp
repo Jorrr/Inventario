@@ -11,9 +11,8 @@
     </head>
     <body>
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        <div style="width: 600px;">
-            <a href="<%= request.getContextPath()%>/categorias.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicon-pencil" role="button">  Crear Categoría</a>
             <h3>Listado de Categorias</h3>
+        <div id="cuadrolistar">
             <table class="table table-striped">
                 <tr>
                     <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>
@@ -30,8 +29,8 @@
                     <td><%= categoria.getEstado_categoria()%></td>
                     <td>
                         
-<a href="<%= request.getContextPath() %>/categorias.do?opcion=modificar&&id_cat=<%= categoria.getId_categoria() %>&&nombre_cat=<%= categoria.getNom_categoria() %>&&estado_cat=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit" role="button" name="btnmodi"> Editar</a>                        
-<a href="<%= request.getContextPath() %>/categorias.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button"> Eliminar</a>       
+<a id="boton" href="<%= request.getContextPath() %>/categorias.do?opcion=modificar&&id_cat=<%= categoria.getId_categoria() %>&&nombre_cat=<%= categoria.getNom_categoria() %>&&estado_cat=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit" role="button" name="btnmodi"> Editar</a>                        
+<a id="boton" href="<%= request.getContextPath() %>/categorias.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button"> Eliminar</a>       
 
                     </td>
                 </tr>
@@ -39,8 +38,9 @@
                     }
                 %>
             </table>
-            <a href="crearPDF" class="btn-danger"> || Mostrar Factura PDF || </a>
+            <a id="crear" href="<%= request.getContextPath()%>/categorias.do?opcion=crear" class="btn btn-success" role="button">  Crear Categoría</a>
+            <a id="pdf" href="crearPDF" class="btn btn-warning">Imprimir PDF</a>
         </div>
-        <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
+     <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
 </html>

@@ -36,18 +36,18 @@
     <body>
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"%>
         <h1>MANTENIMIENTO CATEGORIAS</h1>
-        <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categorias.do" method="post" >
+        <form id="cuadroeditar" class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categorias.do" method="post" >
             <input type="hidden" name="id_categoria" value="<%=id %>"/>
             <div class="form-group">
                 <label for="txtNomCategoria" class="col-sm-2 control-label">Nombre: </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control"  name="txtNomCategoria" value="<%= nombre_cat%>"/>
+                    <input id="barra" type="text" class="form-control"  name="txtNomCategoria" value="<%= nombre_cat%>"/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="txtEstadoCategoria" class="col-sm-2 control-label">Estado: </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control"  name="txtEstadoCategoria" value="<%= estado_cat%>"/>
+                    <input id="barra" type="text" class="form-control"  name="txtEstadoCategoria" value="<%= estado_cat%>"/>
                 </div>
             </div>
                 <div class="form-group">
@@ -55,7 +55,7 @@
                              <%
                         if(request.getParameter("senal")!=null){
                     %>
-                    <input type="submit" class="btn btn-default btn-sm" name="btnModificar" value="Actualizar" />
+                    <input type="submit" class="btn btn-success" name="btnModificar" value="Actualizar" />
                     <%
                         }else{   
                     %>    
@@ -64,7 +64,7 @@
                         }  
                     %> 
                            
-                            <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath()%>/categorias.do?opcion=listar')"
+                            <input type="button" class="btn btn-danger" onclick="regresar('<%= request.getContextPath()%>/categorias.do?opcion=listar')"
                                   name="btnRegresar" value="Regresar" />
                          
                         </div>
