@@ -51,15 +51,15 @@ public class crearPDF extends HttpServlet {
             
             documento.open();
             
-            /*Image imagenes = Image.getInstance("C:\\Users\\Estefany\\Documents\\NetBeansProjects\\CrearPDF\\itca.png");
+            Image imagenes = Image.getInstance("C:\\Users\\Astrid\\Documents\\NetBeansProjects\\InventarioWEB\\web\\bootstrap337\\img\\50Aniversario.png");
             imagenes.setAlignment(Element.ALIGN_LEFT);
             imagenes.scaleToFit(100, 100);
-            documento.add(imagenes);*/
+            documento.add(imagenes);
             
             
             Paragraph par1 = new Paragraph();
             Font fontitulo = new Font(Font.FontFamily.TIMES_ROMAN,16,Font.BOLD,BaseColor.BLUE);
-            par1.add( new Phrase("Creación de Archivos PDF",fontitulo));
+            par1.add( new Phrase("ITCA-FEPADE",fontitulo));
             par1.setAlignment(Element.ALIGN_CENTER);
             par1.add(new Phrase(Chunk.NEWLINE));
             par1.add(new Phrase(Chunk.NEWLINE));
@@ -67,7 +67,7 @@ public class crearPDF extends HttpServlet {
             
              Paragraph par2 = new Paragraph();
             Font fondescrip = new Font(Font.FontFamily.TIMES_ROMAN,12,Font.NORMAL,BaseColor.BLACK);
-            par2.add( new Phrase("Creando un reporte PDF a partir de una consulta de la base de datos bd_Inventario",fondescrip));
+            par2.add( new Phrase("Datos completos de los registros ingresados en el inventario WEB en el periodo comprendido del mes de mayo a julio del año 2020",fondescrip));
             par2.setAlignment(Element.ALIGN_JUSTIFIED);
             par2.add(new Phrase(Chunk.NEWLINE));
             par2.add(new Phrase(Chunk.NEWLINE));
