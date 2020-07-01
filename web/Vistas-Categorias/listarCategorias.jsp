@@ -12,7 +12,7 @@
     <body>
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
             <h3>Listado de Categorias</h3>
-        <div id="cuadrolistar">
+            <div id="cuadrolistar" class="shadow-lg p-3 mb-5 bg-white rounded">
             <table class="table table-striped">
                 <tr>
                     <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>

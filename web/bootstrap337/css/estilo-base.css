@@ -5,8 +5,22 @@
         height: 80px;
         background: url(../img/wallhaven-6kegww_1600x968.png);
 }
+.saludo{
+    margin-top: 100px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inicioimg{
+    display: block;
+    width: 300px;
+    height: 150px;
+}
 body{
     background: url(../img/wallhaven-3k7qjv_1600x968.png);
+}
+.inicio{
+    background-image: url(../img/wallhaven-13zxr1_1600x768.png);
 }
 #cuadrolistar{
     width: 900px;
@@ -14,9 +28,6 @@ body{
     margin: auto;
     margin-top: 10px;
     padding: 5px 5px 30px 5px;
-    border-top: 35px solid #286090;
-    border-right: 35px solid #286090;
-    border-left: 35px solid #286090;
 }
 #cuadroeditar{
     width: 900px;
@@ -24,9 +35,11 @@ body{
     margin: auto;
     margin-top: 10px;
     padding: 5px 5px 30px 5px;
-    border-top: 35px solid #286090;
-    border-right: 35px solid #286090;
-    border-left: 35px solid #286090;
+}
+.crearicon{
+    margin-top: -155px;
+    margin-right: 130px;
+    float: right;
 }
 #barra{
     width: 500px;
@@ -57,4 +70,17 @@ body{
     height: 36px;
     padding: 10px;
     text-align: center;
+}
+// Iconos 
+#icon{
+    display: inline-block;
+}
+// Acercade
+/*efecto shadows para todas las tarjetas*/
+.card-section{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+/*Para el efecto sombra al pasar por encima el mouse*/
+.card-section:hover{
+	box-shadow:1px 1px 20px #d2d2d2;
 }

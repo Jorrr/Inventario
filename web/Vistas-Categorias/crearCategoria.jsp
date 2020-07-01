@@ -24,6 +24,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="bootstrap337/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap337/css/estilo-base.css" rel="stylesheet" type="text/css"/>
         <title>CONTROL DE INVENTARIO</title>
         <%@include file="../WEB-INF/Vistas-Parciales/css-js.jspf" %>
         <script type="text/javascript">
@@ -36,7 +38,7 @@
     <body>
         <%@include file="../WEB-INF/Vistas-Parciales/encabezado.jspf"%>
         <h1>MANTENIMIENTO CATEGORIAS</h1>
-        <form id="cuadroeditar" class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categorias.do" method="post" >
+        <form id="cuadroeditar" class="form-horizontal shadow-lg p-3 mb-5 bg-white rounded" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categorias.do" method="post" >
             <input type="hidden" name="id_categoria" value="<%=id %>"/>
             <div class="form-group">
                 <label for="txtNomCategoria" class="col-sm-2 control-label">Nombre: </label>
@@ -49,7 +51,7 @@
                 <div class="col-sm-10">
                     <input id="barra" type="text" class="form-control"  name="txtEstadoCategoria" value="<%= estado_cat%>"/>
                 </div>
-            </div>
+            </div>                
                 <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                              <%
@@ -69,7 +71,9 @@
                          
                         </div>
                     </div>
-            
+                <ul class="crearicon">                                         
+                    <a href="#"><li class="fa fa-server fa-5x"></li></a>
+                </ul>
         </form>
         <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf"%>
     </body>
