@@ -49,7 +49,7 @@ public class CategoriaDAOImplementar implements CategoriaDAO{
     public List<Categoria> Listar2() {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
-
+   
     @Override
     public Categoria editarCat(int id_cat_edit) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
